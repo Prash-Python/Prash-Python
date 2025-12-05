@@ -6,7 +6,7 @@ for country in countries_list:
 for i in range(0, len(countries_list)):
     print(f"{i+1}: {countries_list[i]}")
 
-# While loop demonstration.
+# # While loop demonstration.
 count = 0
 while count < len(countries_list):
     print(f"{count+1}: {countries_list[count]}")
@@ -14,7 +14,7 @@ while count < len(countries_list):
 else:
     print("All countries have been printed.")
 
-# Pattern printing using nested loops.
+# # Pattern printing using nested loops.
 for i in range(5):
     for j in range(i+1):
         print('*', end='')
@@ -25,7 +25,7 @@ for i in range(5, 0, -1):
         print('#', end='')
     print()  # Move to the next line after each row
 
-# Count the number of vowels in a given string.
+# # Count the number of vowels in a given string.
 def countVowels(input_string):
     vowels = 'aeiouAEIOU'
     count = 0
@@ -35,10 +35,3 @@ def countVowels(input_string):
     print(f"Number of vowels in the given string: {count}")
     print(f"Number of consonants in the given string: {len(input_string) - count}")
 countVowels(input("Enter a string: "))
-
-def calculateFactorial(number):
-    factorial = 1
-    for i in range(number, 0, -1):
-        factorial *= i
-    print(f"Factorial of {number} is {factorial}")
-calculateFactorial(int(input("Enter a number to calculate its factorial: ")))
