@@ -22,3 +22,27 @@ def checkVowelOrConsonant(character):
         case _:
             print(f"{character} is a Consonant")
 checkVowelOrConsonant(input("Enter a character: "))
+
+# Use match case to create a simple calculator that performs addition, subtraction, multiplication, or division based on user input.
+def simpleCalculator(num1, num2, operation):
+    print("Performing calculation...")
+    match operation:
+        case '+':
+            result = num1 + num2
+            print(f"The result of {num1} + {num2} is: {result}")
+        case '-':
+            result = num1 - num2
+            print(f"The result of {num1} - {num2} is: {result}")
+        case '*':
+            result = num1 * num2
+            print(f"The result of {num1} * {num2} is: {result}")
+        case '/':
+            if num2 != 0:
+                result = num1 / num2
+                print(f"The result of {num1} / {num2} is: {result}")
+            else:
+                print("Error: Division by zero is not allowed.")
+        case _:
+            print("Invalid operation. Please choose from +, -, *, /.")
+
+simpleCalculator(float(input("Enter first number: ")), float(input("Enter second number: ")), input("Enter operation (+, -, *, /): "))
