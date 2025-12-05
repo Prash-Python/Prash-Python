@@ -13,3 +13,9 @@ while count < len(countries_list):
     count += 1
 else:
     print("All countries have been printed.")
+
+# Pattern printing using nested loops.
+for i in range(5):
+    for j in range(i+1):
+        print('*', end='')
+    print()  # Move to the next line after each row
