@@ -35,3 +35,10 @@ def countVowels(input_string):
     print(f"Number of vowels in the given string: {count}")
     print(f"Number of consonants in the given string: {len(input_string) - count}")
 countVowels(input("Enter a string: "))
+
+def calculateFactorial(number):
+    factorial = 1
+    for i in range(number, 0, -1):
+        factorial *= i
+    print(f"Factorial of {number} is {factorial}")
+calculateFactorial(int(input("Enter a number to calculate its factorial: ")))
