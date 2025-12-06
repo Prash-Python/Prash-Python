@@ -109,3 +109,56 @@ import copy
 # print("After sorting the list in ascending order:", my_list)
 # my_list.clear()
 # print("After clearing the list:", my_list)
+# Example of list comprehension to create a list of squares of even numbers from 1 to 5.
+# squares_of_even = [x**2 for x in range(1, 6) if x % 2 == 0]
+# print("Squares of even numbers from 1 to 5:", squares_of_even)  # Output: [4, 16]
+# # Some more examples of list comprehensions
+# cubes = [x**3 for x in range(1, 6)]
+# print("Cubes of numbers from 1 to 5:", cubes)  # Output: [1, 8, 27, 64, 125]
+# even_numbers = [x for x in range(1, 11) if x % 2 == 0]
+# print("Even numbers from 1 to 10:", even_numbers)  # Output: [2, 4, 6, 8, 10]
+# odd_numbers = [x for x in range(1, 11) if x % 2 != 0]
+# print("Odd numbers from 1 to 10:", odd_numbers)  # Output: [1, 3, 5, 7, 9]
+# multiples_of_three = [x for x in range(1, 21) if x % 3 == 0]
+# print("Multiples of three from 1 to 20:", multiples_of_three)  # Output: [3, 6, 9, 12, 15, 18]
+# Square numbers that are even  from 1 to 10
+# squares_of_even = [x ** 2 for x in range(1,11) if x % 2 ==0]
+# print("Squares of even numbers from 1 to 10:", squares_of_even)  # Output: [4, 16, 36, 64, 100]
+# # Square numbers that are odd from 1 to 10
+# squares_of_odd = [x ** 2 for x in range(1,11) if x % 2 !=0]
+# print("Squares of odd numbers from 1 to 10:", squares_of_odd)  # Output: [1, 9, 25, 49, 81]
+# Example to read nested list using list comprehension.
+nested_list = [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
+flat_list = [item for sublist in nested_list for item in sublist]
+print("Flattened list:", flat_list)  # Output: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+# Example to create a list of tuples using list comprehension.
+tuples_list = [(x, x**2) for x in range(1, 6)]
+print("List of tuples (number, square):", tuples_list)  # Output: [(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
+# Example to filter and create a list of prime numbers using list comprehension.
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2, int(num**0.5) + 1):
+#         if num % i == 0:
+#             return False
+#     return True
+
+# prime_numbers = [x for x in range(1, 21) if is_prime(x)]
+# print("Prime numbers from 1 to 20:", prime_numbers)  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
+# Capitalize using list comprehension.
+# words = ["hello", "world", "python", "programming"]
+# capitalized_words = [word.capitalize() for word in words]
+# print("Capitalized words:", capitalized_words)  # Output: ['Hello', 'World', 'Python', 'Programming']
+# Another example of list comprehension.
+fruits = ["apple", "banana", "cherry", "date", "orange"]
+fruits_name_starts_with_a = [fruit for fruit in fruits if fruit.startswith('a')]
+print("Fruits starting with 'a':", fruits_name_starts_with_a)  # Output: ['apple']
+fruits_name_ends_with_e = [fruit for fruit in fruits if fruit.endswith('e')]
+print("Fruits ending with 'e':", fruits_name_ends_with_e)  # Output: ['apple', 'date', 'orange']
+fruits_name_whose_length_is_5 = [fruit for fruit in fruits if len(fruit) == 5]
+print("Fruits with length 5:", fruits_name_whose_length_is_5)  # Output: ['apple']
+fruits_name_guava = [fruit for fruit in fruits if fruit == 'guava']
+print("Fruits with name 'guava':", fruits_name_guava)  # Output: []
+fruits_name_not_banana = [fruit for fruit in fruits if fruit != 'banana']
+print("Fruits not named 'banana':", fruits_name_not_banana)  # Output: ['apple', 'cherry', 'date', 'orange']
+veg_name = ["carrot", "broccoli", "spinach", "potato", "onion"]
