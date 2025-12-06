@@ -57,3 +57,19 @@ def countStringComponents(input_string):
 
 input_string = input("Enter a string to analyze: ")
 countStringComponents(input_string)
+
+# Calculate the sum of digits in a given string.
+def sum_of_digits(input_string):
+    digits = ""
+    for char in input_string:
+        if char.isdigit():
+            digits += char
+    if digits == "":
+        total = 0
+    else:
+        total = int(digits)
+    final_sum = total + num
+    print(f"The sum of digits {total} and {num} is: {final_sum}")
+text = input("Enter a string containing digits to sum: ")
+num = int(input("Enter a number to add to the sum of digits: "))
+sum_of_digits(text)
