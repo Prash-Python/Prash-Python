@@ -1,3 +1,4 @@
+import copy
 # #  There are following types of creation of lists in python:
 # # 1. Using square brackets []
 # # 2. Using list() constructor
@@ -55,7 +56,7 @@
 # print(len(nested_list[3]))
 # print(len(nested_list[4]))
 # print(len(nested_list[4][2]))
-# Shallow Copy
+# Shallow Copy for string and lists. This means the address will remain same for both variables.
 # a = 10
 # print(a, id(a))
 # b = a
@@ -71,3 +72,40 @@
 # list1.append(6)
 # print("Original list1 after append:", list1, id(list1))
 # print("list2 after appending to list1:", list2, id(list2))
+# Deep Copy for lists using copy() method or list() constructor or slicing. This means the address will be different for both variables.
+# original_list = [1, 2, 3, 4, 5]
+# print("Original list:", original_list, id(original_list))
+# deep_copied_list = copy.deepcopy(original_list)
+# print("Deep copied list using copy.deepcopy():", deep_copied_list, id(deep_copied_list))
+# list = [1, 2, 3, 4, 5]
+# print(max(list))  # Output: 5
+# print(min(list))  # Output: 1 max will work for same data types only in list.
+# list_mixed = [1, "two", 3.0, 4, "five"]
+# # print(max(list_mixed))  # This will raise TypeError
+# # Performing various list operations and printing the list after each operation.
+# my_list = []
+# my_list.append(10)
+# print("After appending 10:", my_list)
+# my_list.append(20)
+# print("After appending 20:", my_list)
+# my_list.append(30)
+# print("After appending 30:", my_list)
+# my_list.extend([40, 50, 60])
+# print("After extending with [40, 50, 60]:", my_list)
+# my_list.insert(6, 70)
+# print("After inserting 70 at index 6:", my_list)
+# my_list.remove(70)
+# print("After removing 70:", my_list)
+# popped_element = my_list.pop()
+# print("After popping element:", my_list)
+# print("Popped element:", popped_element)
+# my_list.sort()
+# print("After sorting the list:", my_list)
+# my_list.reverse()
+# print("After reversing the list:", my_list)
+# my_list.sort(reverse=True)
+# print("After sorting the list in descending order:", my_list)
+# my_list.sort(reverse=False)
+# print("After sorting the list in ascending order:", my_list)
+# my_list.clear()
+# print("After clearing the list:", my_list)
