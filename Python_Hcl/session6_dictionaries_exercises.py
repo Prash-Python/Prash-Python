@@ -81,3 +81,28 @@ def print_all_months_having_31_days():
     print(list_of_31_days_month)
 print_all_months_having_31_days()
 
+def sort_months_by_keys():
+    print(sorted(month_to_num_days_dict.keys()))
+sort_months_by_keys()
+
+def sort_months_by_days():
+    my_list_28 = []
+    my_list_30 = []
+    my_list_31 = []
+    print(sorted(month_to_num_days_dict.values()))
+    for key in month_to_num_days_dict.keys():
+        if month_to_num_days_dict[key] == 28:
+            my_list_28.append(key)
+        if month_to_num_days_dict[key] == 30:
+            my_list_30.append(key)
+        if month_to_num_days_dict[key] == 31:
+            my_list_31.append(key)
+        my_list_30.sort()
+        my_list_31.sort()
+        my_list_28.append(my_list_30)
+        my_list_28.append(my_list_31)
+    print("My_Sorted_List: ", my_list_28)
+        
+sort_months_by_days()
+
+
