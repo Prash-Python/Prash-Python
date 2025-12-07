@@ -23,3 +23,11 @@ def main():
     print("Division: ", d)
     print("Modulo: ", e)
 main()
+
+# Nested Functions.
+def outer():
+    print("In Outer function...")
+    def inner():
+        print("In Inner function...")
+    inner()
+outer()
