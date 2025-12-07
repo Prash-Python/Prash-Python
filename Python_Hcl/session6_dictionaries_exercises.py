@@ -46,3 +46,53 @@ print("Dictionary created using dict():", my_dict1)
 my_dict2 = {}
 my_dict2['x'] = 10
 print("Dictionary created using empty braces and adding key-value pair:", my_dict2)
+# Using fromkeys() to create a dictionary with default values.
+keys = ['name', 'age', 'city']
+default_value = None
+my_dict3 = dict.fromkeys(keys, default_value)
+print("Dictionary created using fromkeys():", my_dict3)
+# Using setdefault() to add a key-value pair if the key does not exist.
+my_dict3.setdefault('country', 'USA')
+print("Dictionary after using setdefault():", my_dict3)
+# Using pop() to remove a key-value pair and return the value.
+age = my_dict3.pop('age', 'Not Found')
+print("Value popped for key 'age':", age)
+print("Dictionary after using pop():", my_dict3)
+# Using popitem() to remove and return the last key-value pair.
+last_item = my_dict3.popitem()
+print("Last item popped using popitem():", last_item)
+print("Dictionary after using popitem():", my_dict3)
+# Using update() to add multiple key-value pairs.
+my_dict3.update({'age': 25, 'city': 'Los Angeles'})
+print("Dictionary after using update():", my_dict3)
+# Using copy() to create a shallow copy of the dictionary.
+my_dict4 = my_dict3.copy()
+print("Shallow copy of the dictionary:", my_dict4)
+print("Original dictionary ID:", id(my_dict3))
+print("Shallow copy dictionary ID:", id(my_dict4))
+# The IDs are different, showing that a new dictionary object was created.
+# Using nested dictionaries.
+nested_dict = { 'person1': {'name': 'Bob', 'age': 28},
+                'person2': {'name': 'Carol', 'age': 32}}
+print("Nested dictionary:", nested_dict)
+print("Accessing nested dictionary value:", nested_dict['person1']['name'])
+# Using dictionary comprehension to create a dictionary.
+squared_dict = {x: x**2 for x in range(5)}
+print("Dictionary created using dictionary comprehension:", squared_dict)
+# Using the keys(), values(), and items() methods.
+print("Keys:", list(squared_dict.keys()))
+print("Values:", list(squared_dict.values()))
+print("Items:", list(squared_dict.items()))
+# Merging two dictionaries using the | operator (Python 3.9+).
+dict_a = {'a': 1, 'b': 2}
+dict_b = {'b': 3, 'c': 4}
+merged_dict = dict_a | dict_b
+print("Merged dictionary using | operator:", merged_dict)
+# Create a dictionary with mixed data types.
+mixed_dict = {'integer': 1, 'float': 1.5, 'string': 'hello', 'list': [1, 2, 3], 'tuple': (4, 5), 'dict': {'key': 'value'}, 'boolean': True}
+print("Dictionary with mixed data types:", mixed_dict)
+# Accessing and modifying nested dictionary values.
+mixed_dict['dict']['key'] = 'new_value'
+print("Dictionary after modifying nested dictionary value:", mixed_dict)
+# Using the get() method with a default value.
+print("Accessing a non-existent key with get():", mixed_dict.get('non_existent', 'default_value'))
