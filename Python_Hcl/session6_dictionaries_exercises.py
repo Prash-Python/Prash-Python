@@ -40,4 +40,9 @@ print("Dictionary after modification:", my_dict)
 print("Dictionary ID after modification:", id(my_dict))
 # The ID remains the same, showing that the dictionary is mutable.
 my_dict1 = dict(a=1, b=2)
+print(my_dict1.get('a'))
+print(my_dict1['b'])
 print("Dictionary created using dict():", my_dict1)
+my_dict2 = {}
+my_dict2['x'] = 10
+print("Dictionary created using empty braces and adding key-value pair:", my_dict2)
