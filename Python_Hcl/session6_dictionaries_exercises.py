@@ -6,6 +6,7 @@ Dictionaries will have unique keys.
 They are commonly used to store and retrieve data based on unique keys.
 Dictionaries are ordered as of Python 3.7, meaning that they maintain the insertion order of key-value pairs.
 """
+import copy
 # Creation of a dictionary.
 my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
 print("Original dictionary:", my_dict)
@@ -121,5 +122,28 @@ for k,v in my_new_dict.items():
     my_list.append(v)
 print("Set created from dictionary keys:", my_set)
 print("List created from dictionary values:", my_list)
-
- 
+# Demonstration of shallow and deep copy further.
+original_dict = {'a': 1, 'b': {'c': 2, 'd': 3}}
+shallow_copied_dict = copy.copy(original_dict)
+deep_copied_dict = copy.deepcopy(original_dict)
+print("Original dictionary:", original_dict)
+print("Shallow copied dictionary:", shallow_copied_dict)
+print("Deep copied dictionary:", deep_copied_dict)
+print(original_dict, id(original_dict))
+print(shallow_copied_dict, id(shallow_copied_dict))
+print(deep_copied_dict, id(deep_copied_dict))
+original_dict['b']['c'] = 20
+print("After modifying the nested dictionary in the original dictionary:")
+print("Original dictionary:", original_dict)
+print("Shallow copied dictionary:", shallow_copied_dict)
+print("Deep copied dictionary:", deep_copied_dict)
+shallow_copied_dict['b']['d'] = 30
+print("After modifying the nested dictionary in the shallow copied dictionary:")
+print("Original dictionary:", original_dict)
+print("Shallow copied dictionary:", shallow_copied_dict)
+print("Deep copied dictionary:", deep_copied_dict)
+deep_copied_dict['b']['c'] = 200
+print("After modifying the nested dictionary in the deep copied dictionary:")
+print("Original dictionary:", original_dict)
+print("Shallow copied dictionary:", shallow_copied_dict)
+print("Deep copied dictionary:", deep_copied_dict)
