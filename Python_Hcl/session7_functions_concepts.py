@@ -31,3 +31,40 @@ def outer():
         print("In Inner function...")
     inner()
 outer()
+
+# Different types of functional arguments.
+"""
+1.) Positional arguments.
+"""
+def foo(name,message):
+    print(f"Hello {name}, {message}")
+foo("Bob", "Write python codes")
+
+"""
+2.) Keyword or named arguments.
+"""
+def foo(name, age):
+    print(f"Hi {name}, your age is {age}")
+foo(name="Bob", age=15)
+foo(age=15, name="Bob")
+
+"""
+3.) Default Arguments.
+"""
+def foo(name="xyz"):
+    print(f"My name is {name}")
+foo()
+foo("abc")
+
+"""
+4.) Indeterminate arguments.
+"""
+def foo(*args):
+    total = 0
+    for num in args:
+        total += num
+    print(f"The total sum is {total}")
+foo()
+foo(10)
+foo(10,20)
+foo(10,20,30)
