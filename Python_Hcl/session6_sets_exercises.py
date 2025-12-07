@@ -1,3 +1,8 @@
+"""
+Sets are unordered collections of unique elements in Python.
+Sets are immutable.
+They do not allow duplicate values.
+"""
 set1 = set()
 set2 = {1, 2, 3, 4, 5}
 set3 = set([1, 2, 3, 4, 5])
