@@ -152,3 +152,27 @@ print("After modifying the nested dictionary in the deep copied dictionary:")
 print("Original dictionary:", original_dict)
 print("Shallow copied dictionary:", shallow_copied_dict)
 print("Deep copied dictionary:", deep_copied_dict)
+# Create dictionary using fromKeys with different data types as keys.
+keys_list = ['key1', 'key2', 'key3']
+default_value = 0
+dict_fromkeys = dict.fromkeys(keys_list, default_value)
+print("Dictionary created using fromkeys():", dict_fromkeys)
+# Using setdefault() to add a key-value pair if the key does not exist.
+dict_fromkeys.setdefault('key4', 4)
+print("Dictionary after using setdefault():", dict_fromkeys)
+# Create dictionary using comprehension with conditional logic.
+conditional_dict_even = {x: x**2 for x in range(10) if x % 2 == 0}
+print("Dictionary created using comprehension with conditional logic:", conditional_dict_even)
+conditional_dict_odd = {x: x**2 for x in range(10) if x % 2 != 0}
+print("Dictionary created using comprehension with conditional logic (odd):", conditional_dict_odd)
+conditional_dict_squares = {x: x*x for x in range(1, 11) if x*x > 20}
+print("Dictionary of squares greater than 20:", conditional_dict_squares)
+conditional_dict_cubes = {x: x**3 for x in range(1, 11) if x**3 < 1000}
+print("Dictionary of cubes less than 1000:", conditional_dict_cubes)
+conditional_dict_prime = {x: 'prime' for x in range(2, 21) if all(x % i != 0 for i in range(2, int(x**0.5) + 1))}
+print("Dictionary of prime numbers:", conditional_dict_prime)
+# Merging two dictionaries using the update() method.
+dict_one = {'x': 1, 'y': 2}
+dict_two = {'y': 3, 'z': 4}
+dict_one.update(dict_two)
+print("Dictionary after merging using update():", dict_one)
