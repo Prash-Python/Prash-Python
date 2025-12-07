@@ -3,7 +3,7 @@ There are two ways to have the modules in our functions. Using:
 import module_name => It brings entire module.
 from modele_name import function_name => It brings only the one called module here.
 """
-
+from functools import reduce
 # Simple function for calculator operations.
 def calculator(a, b):
     add = a + b
@@ -68,3 +68,39 @@ foo()
 foo(10)
 foo(10,20)
 foo(10,20,30)
+
+"""
+Demonstration of map() function.
+Map returns multiple values.
+"""
+def multiply(numbers):
+    return numbers * 5
+
+given_numbers = map(multiply, [1,2,3,4,5,6])
+for item in given_numbers:
+    print(item)
+
+"""
+Demonstration of filter() function.
+Filter also returns multiple values.
+"""
+def checkage(age):
+    if age >= 18:
+        return age
+    
+list1 = [19,25,8,17,89,92]
+correctAges = filter(checkage, list1)
+for item in correctAges:
+    print(item)
+
+"""
+Demonstration of reduce() function.
+Reduce function will return only a single value.
+"""
+
+def addNumbers(x,y):
+    return x + y
+
+l11 = [10,20,30,40,50,60]
+sumTotal = reduce(addNumbers, l11)
+print(sumTotal)
