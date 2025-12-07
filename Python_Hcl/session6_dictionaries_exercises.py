@@ -113,7 +113,7 @@ for value in dict_iter.values():
     print(f"Value from values(): {value}")
 for key, value in dict_iter.items():
     print(f"Key from items(): {key}, Value from items(): {value}")
-# Creating a set from dictionary keys.
+# Creating a set and list from dictionary keys.
 my_set = set()
 my_list = []
 my_new_dict = { 'a': 1, 'b': 2, 'c': 3 }
@@ -122,6 +122,11 @@ for k,v in my_new_dict.items():
     my_list.append(v)
 print("Set created from dictionary keys:", my_set)
 print("List created from dictionary values:", my_list)
+# Creating a dictionary with set and list as key and value.
+set_keys = {'p', 'q', 'r'}
+list_values = [1, 2, 3]
+dict_with_set_list = {k:v for (k,v) in zip(set_keys, list_values)}
+print("Dictionary with set as key and list as value:", dict_with_set_list)
 # Demonstration of shallow and deep copy further.
 original_dict = {'a': 1, 'b': {'c': 2, 'd': 3}}
 shallow_copied_dict = copy.copy(original_dict)
