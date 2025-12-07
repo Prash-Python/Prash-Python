@@ -96,3 +96,30 @@ mixed_dict['dict']['key'] = 'new_value'
 print("Dictionary after modifying nested dictionary value:", mixed_dict)
 # Using the get() method with a default value.
 print("Accessing a non-existent key with get():", mixed_dict.get('non_existent', 'default_value'))
+# Dictionary with tuple keys.
+tuple_key_dict = {('a', 1): 'value1', (3, 2): 'value2'}
+print("Dictionary with tuple keys:", tuple_key_dict)
+# Accessing values using tuple keys.
+print("Accessing value with tuple key ('a', 1):", tuple_key_dict[('a', 1)])
+print("Accessing value with tuple key (3, 2):", tuple_key_dict[(3, 2)])
+# Iteration through dictionary.
+dict_iter = {'x': 10, 'y': 20, 'z': 30}
+for key in dict_iter:
+    print(f"Key: {key}, Value: {dict_iter[key]}")
+for key in dict_iter.keys():
+    print(f"Key from keys(): {key}")
+for value in dict_iter.values():
+    print(f"Value from values(): {value}")
+for key, value in dict_iter.items():
+    print(f"Key from items(): {key}, Value from items(): {value}")
+# Creating a set from dictionary keys.
+my_set = set()
+my_list = []
+my_new_dict = { 'a': 1, 'b': 2, 'c': 3 }
+for k,v in my_new_dict.items():
+    my_set.add(k)
+    my_list.append(v)
+print("Set created from dictionary keys:", my_set)
+print("List created from dictionary values:", my_list)
+
+ 
