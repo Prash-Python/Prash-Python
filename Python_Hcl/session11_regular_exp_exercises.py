@@ -1,3 +1,5 @@
+import re
+
 # "Contact us at support@example.com or sales@shop.com"
 def extract_email_with_re(given_text):
     pattern = re.compile(r'[a-z]+@[a-z]+.[a-z]')
